@@ -4,12 +4,12 @@ import { Link } from 'react-router';
 class Car extends Component {
     render(){
         // Get data from route props
-        const cars = this.props.route.data;
+        const cars  = this.props.route.data;
         // Map through cars and return linked cars
         const carNode = cars.map((car) => {
             return (
                 <Link
-                    to={"/cars/"+car.id}
+                    to={"/cakes/"+car.id}
                     className="list-group-item"
                     key={car.id}>
                     {car.name}
@@ -18,7 +18,7 @@ class Car extends Component {
         });
         return (
             <div>
-                <h1>Cars page</h1>
+                <h1>cakes page</h1>
                 <div className="list-group">
                     {carNode}
                 </div>

@@ -3,11 +3,11 @@ import { render } from 'react-dom';
 // Import routing components
 import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 
-import Main from './common/main.component.jsx'
-import Home from './common/home.component.jsx'
-import About from './common/about.component.jsx'
-import Car from './car/car.component.jsx'
-import CarDetail from './car/car-detail.component.jsx'
+import Main from './Common/main.component.jsx'
+import Home from './Common/home.component.jsx'
+import About from './Common/about.component.jsx'
+import Car from './Car/car.component.jsx'
+import CarDetail from './Car/car-detail.component.jsx'
 
 const data = [
     {
@@ -52,18 +52,17 @@ const data = [
         make: '25',
         media: 'https://www.willcookforsmiles.com/wp-content/uploads/2012/05/DSC_1192-edited.jpg',
         price: '5500/='
-    //}];
 
-];
+}];
 
 
 render(
     <Router history={browserHistory}>
         <Route component={Main}>
             <Route path="/" component={Home}/>
-            <Route path="/cars" component={Car} data={data}/>
+            <Route path="/cakes" component={Car} data={data}/>
             {/* Parameter route*/}
-            <Route path="/cars/:id" component={CarDetail} data={data}/>
+            <Route path="/cakes/:id" component={CarDetail} data={data}/>
             <Route path="/about" component={About}/>
         </Route>
     </Router>,
